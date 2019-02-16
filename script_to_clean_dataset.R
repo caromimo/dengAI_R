@@ -1,4 +1,4 @@
-# execute code in the same folder as training.csv dataset is located
+# execute code in the same folder as merged_training_data.csv dataset is located
 
 # clear workspace memory
 remove(list=ls())
@@ -36,5 +36,3 @@ md.pattern(imputed_training_data)
 imputed_training_data %>% 
   filter(is.na(reanalysis_sat_precip_amt_mm) == FALSE) %>%
   write_csv("clean_training_data.csv")
-
-
