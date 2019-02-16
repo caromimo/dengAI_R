@@ -1,0 +1,8 @@
+*.html
+*.png
+*.RData
+*.ipynb_checkpoints/
+*.csv
+/papers
+ani_katchova/
+/elisabeth
