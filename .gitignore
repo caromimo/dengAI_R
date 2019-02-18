@@ -3,3 +3,4 @@
 *.RData
 *.ipynb_checkpoints/
 *.csv
+*.pdf
