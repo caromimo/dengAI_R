@@ -1,0 +1,16 @@
+#!/usr/bin/env Rscript
+# clean_data function executable from the command line
+
+# clear workspace memory
+remove(list=ls())
+
+# import libraries
+library(tidyverse)
+# assumes that the clean_data function is saved in same folder
+source("clean_data.R")
+
+# assumes that the csv is saved in same folder
+merged_training_data <- read_csv("merged_training_data.csv")
+
+clean_data(merged_training_data) %>%
+  write_csv("clean_training_data.csv")
