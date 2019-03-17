@@ -6,8 +6,9 @@ data <- read_csv("clean_training_data.csv") %>%
 
 # to plot the correlation matrix
 correl <- cor(data, use = "all.obs", method="pearson")
-ggcorrplot(correl)
-ggsave("correlation_matrix.png", device="png")
+p.mat <- cor_pmat(correl)
+ggcorrplot(correl, title = "Correlation matrix", lab=TRUE, p.mat = p.mat, sig.level = .05)
+ggsave("correlation_matrix.png", height = 21 , width = 21 , device="png")
 
 # to extract the results
 res <- cor(data)
